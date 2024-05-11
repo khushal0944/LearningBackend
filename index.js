@@ -25,6 +25,7 @@ app.get('/login',(req,res)=>{
 
 app.get('/github',async (req,res)=>{
     const username = "";
+    
     const data = await apifetch(username);
     if(!(data.message === "Not Found")) res.send(data);
     else res.send(`Error Getting api from this ${username}` )
